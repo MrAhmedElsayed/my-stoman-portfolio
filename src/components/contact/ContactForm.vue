@@ -13,7 +13,7 @@ export default { components: { Button } };
 			>
 				Contact Form
 			</p>
-			<form action="#" class="font-general-regular space-y-7">
+			<form name="contact" method="POST" data-netlify="true" class="font-general-regular space-y-7">
 				<div>
 					<label
 						class="block text-lg text-primary-dark dark:text-primary-light mb-2"

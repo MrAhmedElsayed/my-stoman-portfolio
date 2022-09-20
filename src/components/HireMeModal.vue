@@ -54,7 +54,7 @@ export default {
 								</button>
 							</div>
 							<div class="modal-body p-5 w-full h-full">
-								<form class="max-w-xl m-4 text-left" name="contact" method="POST" data-netlify="true">
+								<form class="max-w-xl m-4 text-left" name="hireMe" method="POST" data-netlify="true">
 									<div class="mt-0">
 										<input
 											class="w-full px-5 py-2 border-1 border-gray-200 dark:border-secondary-dark rounded-md text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
