@@ -1,5 +1,5 @@
 <template>
-  <div class="relative -z-10 p-5 pt-10 lg:pt-11 pb-10 bg-white">
+  <div class="relative p-5 pt-10 lg:pt-11 pb-10 bg-white">
     <!--    <div class="container">-->
     <div class="flex flex-wrap -mx-4">
       <div class="w-full lg:w-5/12 px-4">
@@ -18,17 +18,21 @@
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
-              <a
-                href="#"
+              <router-link
+                to="/projects"
                 class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
-                >Get started</a
               >
+                My Projects
+              </router-link>
             </div>
             <div class="mt-3 sm:mt-0 sm:ml-3">
               <a
-                href="#"
-                class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
-                >Live demo</a
+                href="/files/Stoman-Resume.pdf"
+                class="group flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
+                download="ahmed-cv"
+              >
+                <ArrowDownCircleIcon class="h-7 w-7 mr-3" />
+                <span>Download CV</span></a
               >
             </div>
           </div>
@@ -113,6 +117,10 @@
     <!--    </div>-->
   </div>
 </template>
+
+<script setup>
+import { ArrowDownCircleIcon } from "@heroicons/vue/24/outline";
+</script>
 
 <script>
 export default {

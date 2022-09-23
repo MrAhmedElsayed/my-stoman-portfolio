@@ -8,6 +8,7 @@
         </transition>
       </router-view>
     </section>
+    <BackToUp />
     <AppFooter />
   </main>
 </template>
@@ -28,6 +29,7 @@ export default {
 <script setup>
 import AppHeader from "@/components/AppHeader";
 import AppFooter from "@/components/AppFooter";
+import BackToUp from "@/components/BackToUp";
 const appTheme = localStorage.getItem("theme");
 </script>
 
