@@ -1,9 +1,3 @@
-<script>
-export default {
-  props: ["project"],
-};
-</script>
-
 <template>
   <router-link
     to="/projects/single-project"
@@ -31,4 +25,8 @@ export default {
   </router-link>
 </template>
 
-<style lang="scss" scoped></style>
+<script>
+export default {
+  props: ["project"],
+};
+</script>

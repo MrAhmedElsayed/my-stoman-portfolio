@@ -1,9 +1,3 @@
-<script>
-export default {
-  props: ["singleProjectHeader"],
-};
-</script>
-
 <template>
   <div>
     <!-- Project heading and meta info -->
@@ -36,3 +30,9 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["singleProjectHeader"],
+};
+</script>

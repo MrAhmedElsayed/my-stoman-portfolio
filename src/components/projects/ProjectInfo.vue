@@ -1,15 +1,6 @@
 <script>
-import feather from "feather-icons";
-
 export default {
   props: ["projectInfo"],
-
-  mounted() {
-    feather.replace();
-  },
-  updated() {
-    feather.replace();
-  },
 };
 </script>
 
@@ -88,8 +79,26 @@ export default {
             target="__blank"
             aria-label="Share Project"
             class="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-            ><i :data-feather="social.icon" class="w-4 lg:w-5 h-4 lg:h-5"></i
-          ></a>
+          >
+            <!--            start of icons -->
+            <!--            <i :data-feather="social.icon" class="w-4 lg:w-5 h-4 lg:h-5"> </i>-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 lg:w-5 h-4 lg:h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+              />
+            </svg>
+
+            <!--            end of icons -->
+          </a>
         </div>
       </div>
     </div>
