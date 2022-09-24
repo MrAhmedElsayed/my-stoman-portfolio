@@ -4,11 +4,9 @@
       class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800"
     >
       <img
-        class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+        class="w-32 h-32 md:w-52 md:h-auto md:rounded-none rounded-full mx-auto md:ml-0 md:mr-3"
         src="@/assets/images/ahmed.jpg"
-        alt=""
-        width="384"
-        height="512"
+        alt="profile image"
       />
       <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
         <blockquote>

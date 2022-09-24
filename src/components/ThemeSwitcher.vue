@@ -86,6 +86,26 @@ export default {
 
 <script setup>
 // https://flowbite.com/docs/customize/dark-mode/
+
+// // The button
+// <button class="px-2 mb-1" @click="toggleDarkMode">
+//
+// // Click event callback on the dark mode button
+// methods:{
+// toggleDarkMode(){
+//     this.isDark = !this.isDark;
+//     localStorage.setItem('darkMode', this.isDark);
+//  }
+// }
+//
+// // Your data() function
+// data(){
+//     let isDark = localStorage.getItem('darkMode') == 'true'
+//
+//     return{
+//       isDark,
+//     }
+// }
 import { ref } from "vue";
 import { Switch } from "@headlessui/vue";
 import { SunIcon } from "@heroicons/vue/24/solid";
