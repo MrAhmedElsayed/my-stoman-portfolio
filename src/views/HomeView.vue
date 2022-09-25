@@ -1,6 +1,5 @@
 <template>
   <div class="relative p-5 pt-10 lg:pt-11 pb-10 bg-white">
-    <!--    <div class="container">-->
     <div class="flex flex-wrap -mx-4">
       <div class="w-full lg:w-5/12 px-4">
         <div class="hero-content text-center lg:text-left">
@@ -114,22 +113,22 @@
         </div>
       </div>
     </div>
-    <!--    </div>-->
+    <!-- test TOAST-->
+    <NotificationsToast message="this is message" :show-toast="toast" />
   </div>
 </template>
 
 <script setup>
 import { ArrowDownCircleIcon } from "@heroicons/vue/24/outline";
+import NotificationsToast from "@/components/NotificationsToast";
 </script>
 
 <script>
 export default {
   name: "HomeView",
-  components: {
-    //
-  },
   data: () => ({
     theme: "light",
+    toast: true,
   }),
 };
 </script>
