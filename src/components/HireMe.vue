@@ -25,11 +25,13 @@
       >
         <!-- start form -->
         <form
-          name="hire"
-          method="POST"
+          name="hire-me"
+          method="post"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           class="p-7 bg-white shadow-xl rounded-2xl max-w-xl border border-gray-200"
         >
+          <input type="hidden" name="hire-me" value="hire-me" />
           <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
             What project are you looking for?
           </h2>
@@ -41,8 +43,8 @@
               >Email</label
             >
             <input
+              :value="email"
               type="email"
-              id="email"
               name="email"
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
@@ -52,18 +54,19 @@
               >Message</label
             >
             <textarea
-              id="message"
+              :value="message"
               name="message"
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
           <button
+            type="submit"
             class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
           >
             send Request
           </button>
           <p class="text-xs text-gray-500 mt-3">
-            i will reply as soon as posible maximum 24 hours.
+            i will reply as soon as possible maximum 24 hours.
           </p>
         </form>
         <!-- end -->
@@ -75,6 +78,12 @@
 <script>
 export default {
   name: "HireMe",
+  data: () => ({
+    email: "",
+    message: "",
+    panelists: ["Evan You", "Chris Fritz"],
+    currentPanelist: "Evan You",
+  }),
 };
 </script>
 

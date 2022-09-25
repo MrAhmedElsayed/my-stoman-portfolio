@@ -114,7 +114,7 @@
       </div>
     </div>
     <!-- test TOAST-->
-    <NotificationsToast message="this is message" :show-toast="toast" />
+    <NotificationsToast />
   </div>
 </template>
 
