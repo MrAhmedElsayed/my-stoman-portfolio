@@ -25,11 +25,12 @@
       >
         <!-- start form -->
         <form
+          class="p-7 bg-white shadow-xl rounded-2xl max-w-xl border border-gray-200"
           name="hire-me"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          class="p-7 bg-white shadow-xl rounded-2xl max-w-xl border border-gray-200"
+          netlify
         >
           <input type="hidden" name="form-name" value="hire-me" />
           <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
