@@ -69,6 +69,7 @@
 </template>
 
 <script setup>
+// https://vuejsexamples.com/build-a-custom-modal-component-in-vue-js/
 import { ref } from "vue";
 import {
   TransitionRoot,
@@ -78,7 +79,7 @@ import {
   DialogTitle,
 } from "@headlessui/vue";
 
-const isOpen = ref(true);
+const isOpen = ref(false);
 
 function closeModal() {
   isOpen.value = false;
