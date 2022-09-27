@@ -10,9 +10,9 @@ const routes = [
   },
   {
     path: "/about",
-    name: "AboutView",
+    name: "AboutView2",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "about" */ "../views/AboutView2.vue"),
     meta: { title: "Ahmed - About" },
   },
   {
@@ -33,9 +33,18 @@ const routes = [
   },
   {
     path: "/contact",
-    name: "Contact",
+    name: "ContactView2",
     component: () =>
-      import(/* webpackChunkName: "contact" */ "../views/ContactView.vue"),
+      import(/* webpackChunkName: "contact" */ "../views/ContactView2.vue"),
+    meta: { title: "Ahmed - Contact" },
+  },
+  {
+    path: "/certification",
+    name: "CertificationView",
+    component: () =>
+      import(
+        /* webpackChunkName: "contact" */ "../views/CertificationView.vue"
+      ),
     meta: { title: "Ahmed - Contact" },
   },
   // should be the last route

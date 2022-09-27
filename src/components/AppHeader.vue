@@ -49,6 +49,11 @@
             class="font-sans text-lg font-medium text-gray-500 hover:text-indigo-600"
             >Contact</router-link
           >
+          <router-link
+            to="/certification"
+            class="font-sans text-lg font-medium text-gray-500 hover:text-indigo-600"
+            >Certification</router-link
+          >
         </PopoverGroup>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
           <!--  Hire Me Form -->
