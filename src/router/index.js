@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "@/views/HomeView.vue";
 
 const routes = [
   {
@@ -12,14 +12,14 @@ const routes = [
     path: "/about",
     name: "AboutView2",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView2.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/AboutView2.vue"),
     meta: { title: "Ahmed - About" },
   },
   {
     path: "/projects",
     name: "ProjectsView",
     component: () =>
-      import(/* webpackChunkName: "projects" */ "../views/ProjectsView.vue"),
+      import(/* webpackChunkName: "projects" */ "@/views/ProjectsView.vue"),
     meta: { title: "Ahmed - Projects" },
   },
   {
@@ -27,7 +27,7 @@ const routes = [
     name: "SingleProjectsView",
     component: () =>
       import(
-        /* webpackChunkName: "singleProject" */ "../views/SingleProjectsView.vue"
+        /* webpackChunkName: "singleProject" */ "@/views/SingleProjectsView.vue"
       ),
     meta: { title: "Ahmed - Single Project" },
   },
@@ -35,16 +35,14 @@ const routes = [
     path: "/contact",
     name: "ContactView2",
     component: () =>
-      import(/* webpackChunkName: "contact" */ "../views/ContactView2.vue"),
+      import(/* webpackChunkName: "contact" */ "@/views/ContactView2.vue"),
     meta: { title: "Ahmed - Contact" },
   },
   {
     path: "/certification",
-    name: "CertificationView",
+    name: "CertificationView2",
     component: () =>
-      import(
-        /* webpackChunkName: "contact" */ "../views/CertificationView.vue"
-      ),
+      import(/* webpackChunkName: "contact" */ "@/views/CertificationView.vue"),
     meta: { title: "Ahmed - Contact" },
   },
   // should be the last route
@@ -53,7 +51,7 @@ const routes = [
     name: "NotFoundRoute",
     component: () =>
       import(
-        /* webpackChunkName: "notFoundRoute" */ "../views/NotFoundRoute.vue"
+        /* webpackChunkName: "notFoundRoute" */ "@/views/NotFoundRoute.vue"
       ),
     meta: { title: "Ahmed - 404 not found" },
   },

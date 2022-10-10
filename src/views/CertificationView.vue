@@ -1,90 +1,71 @@
 <template>
-  <div class="certificate">
-    <div class="bg-white py-6 sm:py-8 lg:py-12">
-      <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
-        <!-- text - start -->
-        <!-- TODO: https://flowrift.com/c/blog/iNZ24?view=preview THIS IS BETTER -->
-        <div class="mb-10 md:mb-16">
-          <h2
-            class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6"
-          >
-            Certifications
-          </h2>
-
-          <p
-            class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto"
-          >
-            This is a section of some simple filler text, also known as
-            placeholder text. It shares some characteristics of a real written
-            text but is random or otherwise generated.
-          </p>
-        </div>
-        <!-- text - end -->
-
-        <div
-          class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16"
+  <div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+      <!-- text - start -->
+      <div class="mb-10 md:mb-16">
+        <h2
+          class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6"
         >
-          <!-- article - start -->
+          Certifications
+        </h2>
+
+        <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">
+          Programming certifications aren't a big deal. Nowadays, anyone can get
+          certifications online, and hence it has not much value. But, it's not
+          the case for every certification. There might be some particular
+          certifications that could potentially land you a job.
+        </p>
+      </div>
+      <!-- text - end -->
+
+      <div
+        class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 md:gap-6 xl:gap-8"
+      >
+        <!-- article - start -->
+        <div
+          v-for="certificate in Certifications"
+          :key="certificate.id"
+          class="flex flex-col md:flex-row items-center border rounded-lg overflow-hidden"
+        >
           <div
-            v-for="certificate in Certifications"
-            :key="certificate.id"
-            class="flex flex-col md:flex-row items-center gap-4 lg:gap-6"
+            class="group w-full md:w-32 lg:w-48 h-48 md:h-full block self-start shrink-0 bg-gray-100 overflow-hidden relative"
           >
-            <div
-              @click="certificateDetails(certificate)"
-              class="group cursor-pointer w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
-            >
-              <img
-                :src="certificate.imageUrl"
-                loading="lazy"
-                alt="Photo by Minh Pham"
-                class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-              />
-            </div>
+            <img
+              :src="certificate.imageUrl"
+              loading="lazy"
+              :alt="certificate.title"
+              class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
+            />
+          </div>
 
-            <div class="flex flex-col gap-2">
-              <span class="text-gray-400 text-sm">{{
-                certificate.graduationDate
-              }}</span>
+          <div class="flex flex-col gap-2 p-4 lg:p-6">
+            <span class="text-gray-400 text-sm">{{
+              certificate.graduationDate
+            }}</span>
 
-              <h2 class="text-gray-800 text-xl font-bold">
-                <div
-                  @click="certificateDetails(certificate)"
-                  class="hover:text-indigo-500 active:text-indigo-600 transition duration-100 cursor-pointer"
-                >
-                  {{ certificate.title }}
-                </div>
-              </h2>
-
-              <p class="text-gray-500">
-                {{ certificate.subTitle }}
-              </p>
-
-              <div>
-                <div
-                  @click="certificateDetails(certificate)"
-                  class="text-indigo-500 cursor-pointer hover:text-indigo-600 active:text-indigo-700 font-semibold transition duration-100 inline-flex items-center text-center py-2"
-                >
-                  Read more
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    class="ml-1 w-3 h-3"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
+            <h2 class="text-gray-800 text-xl font-bold">
+              <div
+                class="hover:text-indigo-500 active:text-indigo-600 transition duration-100"
+              >
+                {{ certificate.title }}
               </div>
+            </h2>
+
+            <p class="text-gray-500">
+              {{ certificate.subTitle }}
+            </p>
+
+            <div>
+              <button
+                @click="certificateDetails(certificate)"
+                class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-semibold transition duration-100"
+              >
+                Read more
+              </button>
             </div>
           </div>
-          <!-- article - end -->
         </div>
+        <!-- article - end -->
       </div>
     </div>
     <!-- start - modal, TODO: try to make it a component -->
@@ -340,5 +321,3 @@ export default {
   name: "CertificationView",
 };
 </script>
-
-<style scoped></style>
